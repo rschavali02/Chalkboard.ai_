@@ -16,7 +16,7 @@ def get_db_connection():
             uri,
             tls=True,
             tlsCAFile='isrgrootx1.pem',
-            tlsCertificateKeyFile='client_certificate.pem',  # Change to False
+            tlsCertificateKeyFile='certificate.pem',  # Change to False
     )
     db = client["chalkboard_db"]
     return db
