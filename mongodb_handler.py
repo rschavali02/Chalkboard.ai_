@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 # MongoDB connection setup
 def get_db_connection():
     client = MongoClient(
-        "mongodb+srv://dstutz:QulJC71ClrdoSIYi@chalkboarddb.ablhj7x.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB",
+        "mongodb+srv://rahulchavali1:bHseoekkUd2b0OzE@chalkboarddb.uemagi8.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB",
         tls=True,
         tlsAllowInvalidCertificates=True
     )
