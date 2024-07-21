@@ -6,7 +6,7 @@ import certifi
 # MongoDB connection setup
 def get_db_connection():
     client = MongoClient(
-        "mongodb+srv://rahulchavali1:bHseoekkUd2b0OzE@chalkboarddb.uemagi8.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB",
+        "mongodb+srv://rahulchavali1:bHseoekkUd2b0OzE@chalkboarddb.uemagi8.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB&tlsCAFile=isrgrootx1.pem",
             tls=True,
             tlsAllowInvalidCertificates=False,  # Change to False
             serverSelectionTimeoutMS=5000,  # Increase timeout to 5 seconds
