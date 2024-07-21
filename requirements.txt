@@ -3,7 +3,7 @@ pandas
 assemblyai
 fpdf
 python-docx
-pymongo
+pymongo>=3.12
 llama-index
 llama_index.readers.youtube_transcript
 llama_index.readers.assemblyai
