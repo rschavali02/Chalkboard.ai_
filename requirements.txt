@@ -11,6 +11,5 @@ llama_index.readers.youtube_transcript
 llama_index.readers.assemblyai
 assemblyai
 docx
-io
 fpdf
 audio_extract
