@@ -5,18 +5,10 @@ from bson.objectid import ObjectId
 
 # MongoDB connection setup
 def get_db_connection():
-    #Change back to original db connection to work on local:
-    #client = MongoClient(
-            #"mongodb+srv://dstutz:QulJC71ClrdoSIYi@chalkboarddb.ablhj7x.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB",
-            #to use mine, get rid of X.509 and use my mongoDB string
-            #tls=True,
-            #tlsAllowInvalidCertificates=False
-    uri = "mongodb+srv://chalkboarddb.uemagi8.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=chalkboardDB"
     client = MongoClient(
-            uri,
-            tls=True,
-            tlsCAFile='isrgrootx1 (5).pem',
-            tlsCertificateKeyFile='client_certificate.pem',  # Change to False
+        "mongodb+srv://dstutz:QulJC71ClrdoSIYi@chalkboarddb.ablhj7x.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB",
+        tls=True,
+        tlsAllowInvalidCertificates=True
     )
     db = client["chalkboard_db"]
     return db
