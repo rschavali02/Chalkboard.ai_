@@ -15,8 +15,8 @@ def get_db_connection():
     client = MongoClient(
             uri,
             tls=True,
-            tlsCAFile='isrgrootx1.pem',
-            tlsCertificateKeyFile='certificate.pem',  # Change to False
+            tlsCAFile='isrgrootx1 (5).pem',
+            tlsCertificateKeyFile='client_certificate.pem',  # Change to False
     )
     db = client["chalkboard_db"]
     return db
