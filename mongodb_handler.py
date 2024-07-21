@@ -1,4 +1,4 @@
-from pymongo import MongoClient, ServerApi
+from pymongo import MongoClient
 import streamlit as st
 from bson.objectid import ObjectId
 
@@ -8,8 +8,7 @@ def get_db_connection():
     uri = "mongodb+srv://chalkboarddb.uemagi8.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=chalkboardDB"
     client = MongoClient(uri, 
                          tls = True, 
-                         tlsCertificateKeyFile = 'isrgrootx1.pem',
-                         server_api=ServerApi('1')     
+                         tlsCertificateKeyFile = 'isrgrootx1.pem',   
     )
     db = client["chalkboard_db"]
     return db
