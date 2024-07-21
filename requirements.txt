@@ -6,7 +6,6 @@ python-docx
 pymongo
 llama-index
 pymongo
-bson.objectid
 ollama
 llama_index.readers.youtube_transcript
 llama_index.readers.assemblyai
