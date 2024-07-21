@@ -46,3 +46,4 @@ def delete_note(note_id):
         st.success("Notes deleted successfully!")
     else:
         st.error("Error: Notes could not be deleted.")
+        st.write(f"Note ID: {note_id} - Delete count: {result.deleted_count}")

@@ -1,22 +1,25 @@
 import sys
 import os
+from dotenv import load_dotenv
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from llama_index.readers.youtube_transcript import YoutubeTranscriptReader
 from llama_index.readers.assemblyai import AssemblyAIAudioTranscriptReader
 import assemblyai as aai
 import pandas as pd
 from llama_index.core.llama_pack import download_llama_pack
-from ollama_interface import gen
+from groqllama_interface import gen
 import streamlit as st
 from docx import Document
 from io import BytesIO
 from fpdf import FPDF
 from custom_css import add_custom_css
 from custom_html import add_custom_html
-from mongodb_handler import save_notes, get_notes_by_subject, get_subjects, delete_note  # Updated import
+from mongodb_handler import save_notes, get_notes_by_subject, get_subjects, delete_note
 from audio_extract import extract_audio
 
-API_KEY = "68b5e00bfac44433b2abc29dcf1aacaf"
+load_dotenv() 
+
+API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 
 # Set page configuration
 st.set_page_config(
@@ -71,6 +74,7 @@ def main():
     st.title("Chalkboard.ai")
     st.subheader("Note Taker for YouTube Lectures or Any Video!")
     st.subheader("Generate, Edit Your Notes, Save Your Notes, and Download")
+
     # Create columns for layout
     col1, col2 = st.columns(2)
 
@@ -119,7 +123,7 @@ def main():
             df = pd.DataFrame({"source": sources, "doc": list(map(doc_to_text, documents))})
             df.to_csv("./docs.csv")
 
-            # Generate notes using ollama_interface
+            # Generate notes using groqllama_interface
             with open("./docs.csv", "r") as doc:
                 detail_instruction = f"The detail level should be {detail_level}."
                 if detail_level <= 3:

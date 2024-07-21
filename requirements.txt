@@ -1,15 +1,15 @@
 streamlit
 pandas
+dotenv
 assemblyai
 fpdf
 python-docx
 pymongo
 llama-index
-pymongo
-ollama
 llama_index.readers.youtube_transcript
 llama_index.readers.assemblyai
 assemblyai
 docx
 fpdf
 audio_extract
+groq
