@@ -9,3 +9,7 @@
 
 <img width="1465" alt="Screenshot 2024-07-20 at 6 32 58 PM" src="https://github.com/user-attachments/assets/3cfc6918-4180-4229-aeb4-0a8565aae3de">
 
+https://github.com/user-attachments/assets/de0e4a5c-9367-47bf-8d32-d68e873a85ff
+
+[chalkboard.ai.pdf](https://github.com/user-attachments/files/16324686/chalkboard.ai.pdf)
+
