@@ -5,13 +5,11 @@ from bson.objectid import ObjectId
 
 # MongoDB connection setup
 def get_db_connection():
+    uri = "mongodb+srv://chalkboarddb.uemagi8.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=chalkboardDB"
     client = MongoClient(
-        "mongodb+srv://rahulchavali1:bHseoekkUd2b0OzE@chalkboarddb.uemagi8.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB&tlsCAFile=isrgrootx1.pem",
+            uri,
             tls=True,
-            tlsAllowInvalidCertificates=False,  # Change to False
-            serverSelectionTimeoutMS=5000,  # Increase timeout to 5 seconds
-            socketTimeoutMS=20000,
-            connectTimeoutMS=20000,
+            tlsCertificateKeyFile='isrgrootx1.pem',  # Change to False
     )
     db = client["chalkboard_db"]
     return db
