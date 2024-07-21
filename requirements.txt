@@ -13,4 +13,3 @@ fpdf
 audio_extract
 groq
 python-dotenv
-certifi

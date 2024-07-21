@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import streamlit as st
 from bson.objectid import ObjectId
-import certifi
+
 
 # MongoDB connection setup
 def get_db_connection():
@@ -12,7 +12,6 @@ def get_db_connection():
             serverSelectionTimeoutMS=5000,  # Increase timeout to 5 seconds
             socketTimeoutMS=20000,
             connectTimeoutMS=20000,
-            tlsCAFile=certifi.where()  # Use certifi for SSL certificates
     )
     db = client["chalkboard_db"]
     return db
