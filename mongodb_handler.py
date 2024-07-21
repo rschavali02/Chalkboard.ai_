@@ -7,7 +7,8 @@ def get_db_connection():
     client = MongoClient(
         "mongodb+srv://dstutz:QulJC71ClrdoSIYi@chalkboarddb.ablhj7x.mongodb.net/?retryWrites=true&w=majority&appName=chalkboardDB",
         tls=True,
-        tlsAllowInvalidCertificates=True
+        tlsAllowInvalidCertificates=True,
+        serverSelectionTimeoutMS=5000
     )
     db = client["chalkboard_db"]
     return db
