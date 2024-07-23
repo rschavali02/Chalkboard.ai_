@@ -12,4 +12,7 @@
 ## Presentation:
 - (https://github.com/user-attachments/files/16324686/chalkboard.ai.pdf)
 
+## Installation
+- Download the requirements.txt file and run the transcript.py file, then generate notes!
+
 
