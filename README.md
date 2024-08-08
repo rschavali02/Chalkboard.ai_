@@ -13,6 +13,6 @@
 - (https://github.com/user-attachments/files/16324686/chalkboard.ai.pdf)
 
 ## Installation
-- Download the requirements.txt file and run the transcript.py file, then generate notes!
+- run the requirements.txt file (pip install -r requirements.txt) and run the transcript.py file (streamlit run transcript.py), then generate notes!
 
 
