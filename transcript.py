@@ -63,8 +63,12 @@ def save_as_pdf(text):
     pdf.set_font("DejaVu", size=12)
     pdf.multi_cell(0, 10, text)
     buffer = BytesIO()
-    pdf.output(buffer)
+    
+    # Save the output to the buffer by specifying 'dest' as 'S'
+    pdf_output = pdf.output(dest='S').encode('latin1')  # Encode to ensure compatibility
+    buffer.write(pdf_output)
     buffer.seek(0)
+    
     return buffer
 
 def main():
