@@ -19,7 +19,7 @@ from audio_extract import extract_audio
 
 load_dotenv() 
 
-API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
+API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
 
 # Set page configuration
 st.set_page_config(
@@ -42,7 +42,7 @@ def convertV2A(inputVideoFile):
     extract_audio(input_path=inputVideoFile, output_path="./outputAudio.mp3")
 
 def transcribe_local_audio(path):
-    reader = AssemblyAIAudioTranscriptReader(file_path=path, api_key=API_KEY)
+    reader = AssemblyAIAudioTranscriptReader(file_path=path, api_key= API_KEY)
     return reader.load_data()
 
 # Function to save text as .docx
