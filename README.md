@@ -14,6 +14,6 @@
 
 ## Installation
 - run the requirements.txt file (pip install -r requirements.txt) and run the transcript.py file (streamlit run transcript.py), then generate notes!
-- (ps. you will need to use your own MongoDB database with your ip address and network settings added)
+- (ps. you will need to use your own AssemblyAI and GroqCloud API Key)
 
 
