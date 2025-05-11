@@ -8,6 +8,7 @@
 - Built for LabLab.ai 48 hr LLaMa3 Hackathon
 
 <img width="1465" alt="Screenshot 2024-07-20 at 6 32 58 PM" src="https://github.com/user-attachments/assets/3732defa-a07e-4f9a-b205-ec4dc3da6da6">
+https://www.loom.com/share/d7793752fe7641d89a9dc7a0032f36b9?sid=4b02f2f5-89c8-44e5-9d30-ae130bbadd14
 
 ## Presentation:
 - (https://github.com/user-attachments/files/16324686/chalkboard.ai.pdf)
